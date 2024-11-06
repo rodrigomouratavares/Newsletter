@@ -1,0 +1,2 @@
+# Newsletter
+Utilizando tailwind.
