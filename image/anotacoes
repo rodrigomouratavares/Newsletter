@@ -1,0 +1,41 @@
+align-self -> alinha aquele elemento especifico e não todos da classe pai. Ela precisa ser uma classe filha do flex-box.
+
+group:hover
+
+snimacoes em tailwind:
+Olá! Que legal que você está aprendendo sobre animações no Tailwind CSS!
+
+Nessa aula, aprendemos a criar uma animação personalizada para o sino da newsletter.
+
+Primeiro, definimos que a animação seria disparada ao passar o mouse sobre o sino, usando a classe group-hover.
+
+Depois, criamos a animação em si, usando a diretiva keyframes no arquivo tailwind.config.js.
+
+Nessa diretiva, definimos os estados da animação: no início (0%) e no fim (100%), o sino rotaciona -10 graus, e no meio (50%), rotaciona 10 graus.
+
+Por fim, aplicamos a animação ao sino usando a propriedade animation, definindo a duração, a função de tempo e o número de repetições.
+
+Com isso, conseguimos criar um efeito de chacoalhar no sino quando o mouse passa sobre ele!
+
+Gostou da aula? Tem alguma dúvida? Me fale!
+
+
+Que legal que você quer entender melhor essa aula! Vamos usar algumas analogias para facilitar:
+
+Imagine que você está criando um desenho animado de um personagem que está balançando a cabeça. Para fazer esse movimento, você precisa definir como a cabeça dele vai se mover em cada momento.
+
+No Tailwind CSS, a diretiva keyframes é como um "roteiro" para a animação. Cada ponto que você define dentro dela é como um "quadro" do desenho animado, mostrando a posição da cabeça em um determinado momento.
+
+No nosso exemplo do sino, definimos três "quadros":
+
+Quadro 1 (0% e 100%): O sino está inclinado para a direita (-10 graus).
+Quadro 2 (50%): O sino está inclinado para a esquerda (10 graus).
+Ao combinar esses "quadros", a animação faz o sino "balançar" de um lado para o outro, como se estivesse chacoalhando.
+
+A propriedade animation é como o "controle de reprodução" do nosso desenho animado. Ela define a duração da animação (quanto tempo ela leva para acontecer), a função de tempo (como a animação se move ao longo do tempo) e o número de repetições (quantas vezes a animação vai acontecer).
+
+No nosso caso, a animação dura 0.31 segundos, se move de forma suave (ease-in-out) e se repete infinitamente enquanto o mouse estiver sobre o sino.
+
+Assim, a animação do sino é como um pequeno "desenho animado" que criamos usando o Tailwind CSS, com a diretiva keyframes como o "roteiro" e a propriedade animation como o "controle de reprodução".
+
+Espero que essa analogia tenha te ajudado a entender melhor! Tem mais alguma dúvida? Estou aqui para te ajudar!

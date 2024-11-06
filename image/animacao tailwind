@@ -1,0 +1,132 @@
+Para visualizarmos mais ainda a prática, nós iremos comparar a construção das animações que vimos anteriormente com Tailwind CSS e com CSS puro.
+
+Essa construção será dividida em etapas e ao final da explicação disponibilizarei o codepen das animações com Tailwind e o codepen com o CSS.
+
+Vamos lá!
+
+1ª PARTE: Disparo da animação com base na mudança de estado no elemento pai
+Tailwind
+Como gostaríamos que a animação ocorra apenas quando o cursor do mouse seja passado em cima da div pai (hover), adicionamos nesse elemento a classe utilitária group e nos elementos filhos adicionamos o modificador group-hover somado às classes utilitárias que irão participar da animação.
+
+HTML
+
+<div class="group relative">
+    <svg class="group-hover:opacity-100 group-hover:animate-ping">
+    <svg class="group-hover:animate-sino">
+</div>Copiar código
+CSS
+Para identificarmos cada elemento, primeiro os nomeamos adicionando classes. No elemento pai colocamos a classe .container-sino, no svg do som do sino a classe .som-sino e no svg do sino propriamente dito, a classe .elemento-sino.
+
+HTML
+
+<div class="container-sino">
+    <svg class="som-sino"</svg>
+    <svg class="elemento-sino”></svg>
+</div>Copiar código
+CSS
+
+.container-sino:hover .elemento-sino {
+}
+
+.container-sino:hover .som-sino {
+}Copiar código
+2ª PARTE: Estilizando o elemento pai e seus filhos
+Adição de classes utilitárias ou propriedades CSS para modificar o alinhamento, tamanho, opacidade e cor dos elementos.
+
+Tailwind
+HTML
+
+<script>
+ tailwind.config = {
+  theme: {
+   extend: {
+    colors: {
+     azul: {
+      claro: '#C5DFFF',
+      escuro: '#061E3C',
+     }
+    }
+   }
+ }
+}
+</script>
+<div class="relative">
+    <svg class="absolute top-0 left-1 fill-azul-escuro opacity-0">
+    <svg class="w-12 h-12 fill-azul-claro stroke-azul-escuro">
+</div>Copiar código
+CSS
+CSS
+
+.container-sino {
+  position: relative;  
+}
+.som-sino {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  fill: #061E3C;
+  opacity: 0;
+}
+
+.elemento-sino {
+  width: 3rem;
+  height: 3rem;
+  fill: #C5DFFF;
+  stroke: #061E3C;
+}Copiar código
+3ª PARTE: Criando a animação ping
+Tailwind
+Como essa animação já está disponível para uso, basta adicionar o trecho de código que citei na 1ª parte.
+
+CSS
+Precisaremos criar a animação!
+
+CSS
+
+@keyframes ping_kf {
+  0% {
+    opacity: 100%;
+  }
+  100%, 75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.container-sino:hover .som-sino {
+    animation: ping_kf 1s cubic-bezier(0,0,.2,1) infinite;
+}Copiar código
+4ª PARTE: Criando a animação do sino
+Tailwind
+HTML
+
+    keyframes: {
+     sino_kf: {
+      '0%, 100%': {
+       transform: 'rotate(-10deg)'
+      },
+      '50%': {
+       transform: 'rotate(10deg)'
+      },
+     }
+    },
+    animation: {
+     sino: 'sino_kf 0.31s ease-in-out infinite'
+    }Copiar código
+CSS
+CSS
+
+@keyframes sino_kf {
+  0%, 100% {
+    transform: rotate(-10deg)
+  }
+  50% {
+    transform: rotate(10deg)
+  }
+}
+.container-sino:hover .elemento-sino {
+  animation: sino_kf 0.31s ease-in-out infinite
+}Copiar código
+Um dos maiores propósitos do Tailwind é contribuir para um processo de construção mais rápido e ágil e isso se torna real quando utilizamos muito menos linhas de código, não temos a necessidade de ficar trocando de arquivo, visto que conseguimos fazer exatamente tudo que desejamos sem nem sequer sair do HTML. Além disso, existem recursos padrões como a animação ping que nos permite utilizá-la somente a chamando, sem nem precisar escrever mais que uma linha de código.
+
+Mas e você, qual das duas formas você acredita que facilita mais? Não deixe de visualizar o código completo da animação com Tailwind e da animação com CSS puro no codepen e nos contar no fórum do curso a sua opinião.

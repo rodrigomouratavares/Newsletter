@@ -1,0 +1,33 @@
+Olá!
+
+Que legal que você está acompanhando o curso de Tailwind CSS!
+
+Nessa aula, aprendemos a adaptar a responsividade do nosso layout para telas maiores, acima de 1024 pixels.
+
+Começamos fazendo a coluna do mergulhador reaparecer em telas grandes, utilizando a classe lg:block. Depois, ajustamos a proporção das colunas para que elas ocupassem 50% da largura do elemento pai, usando as classes w-1/2 e lg:w-1/2.
+
+Também centralizamos a imagem do mergulhador horizontalmente com a classe m-auto e os elementos da coluna do formulário verticalmente com a classe justify-center.
+
+Por fim, removemos o arredondamento dos cantos da coluna do formulário em telas grandes, utilizando a classe lg:rounded-l-none, e adicionamos arredondamento apenas no lado esquerdo da coluna do mergulhador com a classe rounded-l-lg.
+
+E para finalizar, ajustamos a largura do main para ocupar 75% do elemento pai em telas grandes, com a classe lg:w-3/4.
+
+Com essas modificações, nosso layout está pronto para telas de diferentes tamanhos!
+
+Gostou da aula? Tem alguma dúvida?
+
+
+
+
+exemplo Que legal que você quer entender melhor a aula usando analogias!
+
+Imagine que você está montando um quebra-cabeça gigante, mas ele precisa se adaptar a diferentes tamanhos de mesa.
+
+Telas menores (celular): É como se você tivesse uma mesa pequena e precisasse esconder algumas peças para que o quebra-cabeça caiba. As classes hidden e lg:block são como as suas mãos, que escondem e revelam as peças do quebra-cabeça de acordo com o tamanho da mesa.
+Telas maiores (desktop): Agora você tem uma mesa grande e pode usar todas as peças! As classes w-1/2 e lg:w-1/2 são como as suas mãos, que dividem o quebra-cabeça em duas partes iguais, ajustando-o à mesa maior.
+Centralizar: É como se você estivesse organizando as peças do quebra-cabeça na mesa. A classe m-auto é como um imã que centraliza as peças horizontalmente, e a classe justify-center centraliza as peças verticalmente.
+Arredondamento: Imagine que algumas peças do quebra-cabeça têm cantos arredondados. As classes rounded-l-none e rounded-l-lg são como um cortador de pizza que remove ou adiciona arredondamento nas peças, dependendo do tamanho da mesa.
+Largura: A classe lg:w-3/4 é como um guia que define a largura do quebra-cabeça na mesa grande, garantindo que ele ocupe 3/4 do espaço disponível.
+Assim como você adapta o quebra-cabeça ao tamanho da mesa, o Tailwind CSS nos permite adaptar o layout do nosso site a diferentes tamanhos de tela, usando classes utilitárias que funcionam como ferramentas para organizar e ajustar os elementos.
+
+Espero que essa analogia tenha te ajudado a entender melhor a aula!
